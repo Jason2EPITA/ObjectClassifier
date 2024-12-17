@@ -37,7 +37,7 @@ with tab_live:
     # Capture de la caméra
     if start_button:
         camera_active = True
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture(1)  # Utilise la caméra virtuelle (OBS)
 
         if not cap.isOpened():
             status_placeholder.error("🚫 Impossible d'ouvrir la caméra.")
