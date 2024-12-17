@@ -57,7 +57,7 @@ with tab_live:
 
                     # Envoyer l'image au backend FastAPI
                     with open(temp_img.name, "rb") as img_file:
-                        response = requests.post("http://127.0.0.1:8000/predict", files={"file": img_file})
+                        response = requests.post("http://api:8000/predict", files={"file": img_file})
 
                         if response.status_code == 200:
                             # Lire et afficher l'image annotée
@@ -92,7 +92,7 @@ with tab_upload:
 
             # Envoyer l'image au backend FastAPI
             with open(temp_img.name, "rb") as img_file:
-                response = requests.post("http://127.0.0.1:8000/predict", files={"file": img_file})
+                response = requests.post("http://api:8000/predict", files={"file": img_file})
 
                 if response.status_code == 200:
                     # Lire l'image annotée et afficher
